@@ -193,6 +193,9 @@
 </head>
 <body class="text-slate-600 antialiased min-h-screen selection:bg-brand-100 selection:text-brand-700 font-sans relative">
 
+  <!-- Interactive Scroll Progress Bar -->
+  <div id="scroll-progress" class="fixed top-0 left-0 h-1.5 bg-gradient-to-r from-brand-500 via-purple-500 to-accent-500 z-50 w-0 transition-all duration-150 ease-out no-print"></div>
+
   <!-- Stylized Gradient Background Orbs (Aurora Effect) - Hidden on print -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1] no-print">
     <div class="absolute -top-[10%] -right-[5%] w-[50vw] h-[50vw] rounded-full bg-gradient-to-br from-brand-100/60 to-accent-100/40 blur-[100px] animate-pulse-slow"></div>
@@ -243,16 +246,16 @@
                 <span class="text-lg sm:text-xl text-slate-500 font-medium">Payments & SaaS</span>
               </div>
               
-              <!-- Quick Contact Links -->
+              <!-- Quick Contact Links with Golden Light Green Glow -->
               <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 pt-3 text-sm text-slate-500 font-medium">
-                <a href="mailto:amonh7@gmail.com" class="group/link flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/60 hover:bg-white border border-slate-100/50 hover:border-lime-400 hover:text-lime-700 transition-all shadow-sm hover:shadow-[0_0_15px_rgba(163,230,53,0.5)] hover:-translate-y-0.5">
+                <a href="mailto:amonh7@gmail.com" class="group/link flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/60 hover:bg-white border border-slate-100/50 hover:border-lime-400 hover:text-lime-700 transition-all shadow-sm hover:shadow-[0_0_15px_rgba(163,230,53,0.4)] hover:-translate-y-0.5">
                   <i data-lucide="mail" class="w-4 h-4 text-slate-400 group-hover/link:text-lime-500 transition-colors"></i> amonh7@gmail.com
                 </a>
-                <span class="group/link flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/60 hover:bg-white border border-slate-100/50 hover:border-lime-400 hover:text-lime-700 transition-all shadow-sm hover:shadow-[0_0_15px_rgba(163,230,53,0.5)] hover:-translate-y-0.5 cursor-pointer">
-                  <i data-lucide="phone" class="w-4 h-4 text-emerald-500 group-hover/link:text-lime-500 transition-colors"></i> 9119938327
+                <span class="group/link flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/60 hover:bg-white border border-slate-100/50 hover:border-lime-400 hover:text-lime-700 transition-all shadow-sm hover:shadow-[0_0_15px_rgba(163,230,53,0.4)] hover:-translate-y-0.5 cursor-pointer">
+                  <i data-lucide="phone" class="w-4 h-4 text-slate-400 group-hover/link:text-lime-500 transition-colors"></i> 9119938327
                 </span>
-                <a href="https://www.linkedin.com/in/amonhlal007/" target="_blank" class="group/link flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/60 hover:bg-white border border-slate-100/50 hover:border-lime-400 hover:text-lime-700 transition-all shadow-sm hover:shadow-[0_0_15px_rgba(163,230,53,0.5)] hover:-translate-y-0.5">
-                  <i data-lucide="linkedin" class="w-4 h-4 text-blue-500 group-hover/link:text-lime-500 transition-colors"></i> LinkedIn
+                <a href="https://www.linkedin.com/in/amonhlal007/" target="_blank" class="group/link flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/60 hover:bg-white border border-slate-100/50 hover:border-lime-400 hover:text-lime-700 transition-all shadow-sm hover:shadow-[0_0_15px_rgba(163,230,53,0.4)] hover:-translate-y-0.5">
+                  <i data-lucide="linkedin" class="w-4 h-4 text-slate-400 group-hover/link:text-lime-500 transition-colors"></i> LinkedIn
                 </a>
               </div>
             </div>
@@ -267,8 +270,8 @@
               <span class="relative z-10">Classic Resume</span>
             </a>
             
-            <!-- Uses window.print() to natively convert to PDF -->
-            <button onclick="window.print()" class="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-teal-400 to-emerald-500 text-white font-semibold rounded-xl transition-all shadow-[0_4px_14px_0_rgba(16,185,129,0.39)] hover:shadow-[0_6px_20px_rgba(16,185,129,0.6)] hover:-translate-y-1 active:scale-95 w-full sm:w-auto text-sm">
+            <!-- Teal/Emerald Gradient Web PDF Button -->
+            <button onclick="window.print()" class="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-teal-400 to-emerald-500 text-white font-semibold rounded-xl transition-all shadow-[0_4px_14px_0_rgba(16,185,129,0.39)] hover:shadow-[0_6px_20px_rgba(16,185,129,0.6)] hover:-translate-y-1 active:scale-95 w-full sm:w-auto text-sm border-none">
               <i data-lucide="printer" class="w-4 h-4 text-emerald-100 group-hover:text-white transition-colors"></i>
               Save WebResume PDF
             </button>
@@ -332,13 +335,14 @@
 
             <div class="mt-6">
               <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
-                <span class="text-xs font-bold text-sky-500 uppercase my-auto mr-2">Tools:</span>
-                <span class="px-3 py-1 bg-sky-50 border border-sky-100 text-xs font-medium text-sky-700 rounded-md hover:bg-sky-100 transition-colors">Figma</span>
-                <span class="px-3 py-1 bg-sky-50 border border-sky-100 text-xs font-medium text-sky-700 rounded-md hover:bg-sky-100 transition-colors">Jira</span>
-                <span class="px-3 py-1 bg-sky-50 border border-sky-100 text-xs font-medium text-sky-700 rounded-md hover:bg-sky-100 transition-colors">Postman</span>
-                <span class="px-3 py-1 bg-sky-50 border border-sky-100 text-xs font-medium text-sky-700 rounded-md hover:bg-sky-100 transition-colors">Clevertap</span>
-                <span class="px-3 py-1 bg-sky-50 border border-sky-100 text-xs font-medium text-sky-700 rounded-md hover:bg-sky-100 transition-colors">Confluence</span>
-                <span class="px-3 py-1 bg-sky-50 border border-sky-100 text-xs font-medium text-sky-700 rounded-md hover:bg-sky-100 transition-colors">Notion</span>
+                <span class="text-xs font-bold text-slate-400 uppercase my-auto mr-2">Tools:</span>
+                <!-- Brand Colored Interactive Tags -->
+                <span class="px-3 py-1 bg-slate-50 border border-slate-100 text-xs font-medium text-slate-600 rounded-md hover:bg-[#F24E1E]/10 hover:text-[#F24E1E] hover:border-[#F24E1E]/30 transition-colors cursor-default">Figma</span>
+                <span class="px-3 py-1 bg-slate-50 border border-slate-100 text-xs font-medium text-slate-600 rounded-md hover:bg-[#0052CC]/10 hover:text-[#0052CC] hover:border-[#0052CC]/30 transition-colors cursor-default">Jira</span>
+                <span class="px-3 py-1 bg-slate-50 border border-slate-100 text-xs font-medium text-slate-600 rounded-md hover:bg-[#FF6C37]/10 hover:text-[#FF6C37] hover:border-[#FF6C37]/30 transition-colors cursor-default">Postman</span>
+                <span class="px-3 py-1 bg-slate-50 border border-slate-100 text-xs font-medium text-slate-600 rounded-md hover:bg-[#FF3B30]/10 hover:text-[#FF3B30] hover:border-[#FF3B30]/30 transition-colors cursor-default">Clevertap</span>
+                <span class="px-3 py-1 bg-slate-50 border border-slate-100 text-xs font-medium text-slate-600 rounded-md hover:bg-[#172B4D]/10 hover:text-[#172B4D] hover:border-[#172B4D]/30 transition-colors cursor-default">Confluence</span>
+                <span class="px-3 py-1 bg-slate-50 border border-slate-100 text-xs font-medium text-slate-600 rounded-md hover:bg-slate-800/10 hover:text-slate-900 hover:border-slate-800/30 transition-colors cursor-default">Notion</span>
               </div>
             </div>
           </section>
@@ -516,7 +520,13 @@
               <a href="https://www.justdial.com/cms/jdpay" target="_blank" rel="noopener noreferrer" class="block p-5 bg-white border border-slate-200 rounded-xl hover:border-violet-300 hover:shadow-md transition-all duration-300 hover:-translate-y-1 group/card relative overflow-hidden">
                 <div class="absolute left-0 top-0 bottom-0 w-1 bg-violet-400 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
                 <h3 class="font-display font-bold text-slate-900 group-hover/card:text-violet-600 transition-colors flex items-center justify-between text-sm">
-                  AI Payment Routing
+                  <div class="flex items-center">
+                    AI Payment Routing
+                    <span class="relative flex h-1.5 w-1.5 ml-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                    </span>
+                  </div>
                   <i data-lucide="external-link" class="w-4 h-4 text-slate-300 group-hover/card:text-violet-500 transition-colors group-hover/card:-translate-y-0.5 group-hover/card:translate-x-0.5"></i>
                 </h3>
                 <p class="text-xs text-slate-500 mt-2 leading-relaxed">Justdial initiative focused on improving transaction success across acquiring partners.</p>
@@ -525,7 +535,13 @@
               <a href="https://business.paytm.com/subscriptions" target="_blank" rel="noopener noreferrer" class="block p-5 bg-white border border-slate-200 rounded-xl hover:border-violet-300 hover:shadow-md transition-all duration-300 hover:-translate-y-1 group/card relative overflow-hidden">
                 <div class="absolute left-0 top-0 bottom-0 w-1 bg-violet-400 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
                 <h3 class="font-display font-bold text-slate-900 group-hover/card:text-violet-600 transition-colors flex items-center justify-between text-sm">
-                  Recurring & e-NACH
+                  <div class="flex items-center">
+                    Recurring & e-NACH
+                    <span class="relative flex h-1.5 w-1.5 ml-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                    </span>
+                  </div>
                   <i data-lucide="external-link" class="w-4 h-4 text-slate-300 group-hover/card:text-violet-500 transition-colors group-hover/card:-translate-y-0.5 group-hover/card:translate-x-0.5"></i>
                 </h3>
                 <p class="text-xs text-slate-500 mt-2 leading-relaxed">Mandate creation and recurring journey with NPCI integration for frictionless subscription billing.</p>
@@ -534,7 +550,13 @@
               <a href="https://www.shakedeal.com" target="_blank" rel="noopener noreferrer" class="block p-5 bg-white border border-slate-200 rounded-xl hover:border-violet-300 hover:shadow-md transition-all duration-300 hover:-translate-y-1 group/card relative overflow-hidden">
                 <div class="absolute left-0 top-0 bottom-0 w-1 bg-violet-400 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
                 <h3 class="font-display font-bold text-slate-900 group-hover/card:text-violet-600 transition-colors flex items-center justify-between text-sm">
-                  Mozart 2.0
+                  <div class="flex items-center">
+                    Mozart 2.0
+                    <span class="relative flex h-1.5 w-1.5 ml-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                    </span>
+                  </div>
                   <i data-lucide="external-link" class="w-4 h-4 text-slate-300 group-hover/card:text-violet-500 transition-colors group-hover/card:-translate-y-0.5 group-hover/card:translate-x-0.5"></i>
                 </h3>
                 <p class="text-xs text-slate-500 mt-2 leading-relaxed">Shakedeal B2B workflow revamp centered on simplification, speed, and massive adoption.</p>
@@ -591,6 +613,14 @@
   <!-- Initialize Icons -->
   <script>
     lucide.createIcons();
+    
+    // Scroll Progress Bar Logic
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('scroll-progress').style.width = scrolled + '%';
+    });
   </script>
 </body>
 </html>
