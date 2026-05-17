@@ -10,6 +10,7 @@ This project is a fully responsive, single-page web portfolio built with HTML an
 * **Print-Optimized (Save Web PDF):** Native CSS print styling allows users to save the webpage as a clean, properly formatted PDF without UI clutter (buttons, shadows, etc.).
 * **Classic Resume Download:** Direct link to download an ATS-friendly, classic LaTeX-generated PDF resume.
 * **Integrated Case Studies:** Direct links to detailed Notion product case studies.
+* **Built-in Analytics & Branding:** Pre-configured for Google Analytics (GA4) and custom Favicon support.
 
 ## 📁 Repository Structure
 
@@ -18,6 +19,7 @@ To ensure all images and downloads work perfectly on GitHub Pages, the repositor
 ```text
 /
 ├── index.html                           # Main web resume code
+├── favicon.png                          # Your custom browser tab icon (Optional)
 ├── profile_pic/
 │   └── Amon_Profile_Pic.png             # Your profile picture
 └── classicResume/
@@ -34,6 +36,20 @@ To ensure all images and downloads work perfectly on GitHub Pages, the repositor
 4. Under "Build and deployment", set the Source to **Deploy from a branch**.
 5. Select the `main` branch and `/ (root)` folder, then click **Save**.
 6. GitHub will take a minute or two to build the site. Your live URL will appear at the top of the Pages settings!
+
+## 🛠️ Setup Instructions (Analytics & Favicon)
+
+### Adding a Favicon (Browser Tab Icon)
+1. Create a simple, square image (like a little 'A' or a briefcase icon).
+2. Name the image file exactly `favicon.png`.
+3. Upload it directly into the **root folder** of your GitHub repository. The icon will automatically appear on your browser tabs!
+
+### Setting up Google Analytics (GA4)
+1. Go to [analytics.google.com](https://analytics.google.com/) and sign in.
+2. Click "Admin" (gear icon) > "Create" > "Property". 
+3. Set it up using your exact GitHub Pages URL (e.g., `https://your-username.github.io`). 
+4. Once set up, Google will give you a **Measurement ID** that looks like this: `G-ABC123XYZ`.
+5. Edit the `index.html` file in your repository, find the two instances of `G-XXXXXXXXXX` in the `<head>` section, and replace them with your actual Measurement ID. Commit the changes.
 
 ## 🤖 How to Update this Code using Google Gemini
 
